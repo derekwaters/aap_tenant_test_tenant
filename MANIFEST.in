@@ -1,0 +1,6 @@
+# Assume all included, then exclude by default
+# This prevents a manifest from being generated, then malicious files being added
+# outside the included set, but the ansible-sign verification still working.
+global-include *
+prune .git
+exclude .pre-commit-config.yaml
